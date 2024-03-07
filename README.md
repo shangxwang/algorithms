@@ -1,1 +1,3 @@
-# algorithms
+# Algorithms
+* insertion sort
+* merge sort
