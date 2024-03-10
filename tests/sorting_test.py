@@ -1,7 +1,7 @@
 import unittest
 from algorithm.sorting import insertion_sort, merge_sort
 
-class TrivialTest(unittest.TestCase):
+class SortingTest(unittest.TestCase):
     def test_true(self):
         print('Hello, welcome to the algorithm world!')
         self.assertTrue(True, "Test value is not true :(")
