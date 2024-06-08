@@ -1,3 +1,8 @@
 # Algorithms
-* insertion sort
-* merge sort
+
+## Sorting
+- insertion sort
+- merge sort
+
+## Multiplication
+- Karatsuba multiplication
