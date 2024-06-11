@@ -35,3 +35,29 @@ def merge_sort(array):
     result.extend(left[i:]) #append the rest to the result array
     result.extend(right[j:])
     return result
+
+def merge_sort_inversion(array):
+    """
+    Compute pairs of inversions using merge sort
+    :param array: a list of numbers
+    :return: sorted list and number of inversions
+    """
+    if len(array) <= 1:
+        return array, 0
+    l, inv_l = merge_sort_inversion(array[:len(array)//2])
+    r, inv_r = merge_sort_inversion(array[len(array)//2:])
+    i = j = 0
+    c = []
+    inv = inv_l + inv_r
+    print(l,r)
+    while i < len(l) and j < len(r):
+        if l[i] < r[j]:
+            c.append(l[i])
+            i += 1
+        else:
+            c.append(r[j])
+            j += 1
+            inv += len(l) - i
+    c.extend(l[i:])
+    c.extend(r[j:])
+    return c, inv   
